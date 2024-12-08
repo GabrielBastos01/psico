@@ -1,0 +1,637 @@
+:root {
+  /* Cores principais */
+  --primary-color: #d1b575;
+  --secondary-color: #ffffff;
+  --background-color: #f7f4ed;
+  --text-color: #4b4b4b;
+  --accent-color: #bfa96f;
+
+  /* Botões */
+  --button-bg-color: #d9c593;
+  --button-text-color: #ffffff;
+  --button-hover-bg-color: #bfa96f;
+  --button-hover-text-color: #ffffff;
+
+  /* Seções */
+  --section-bg-color: #ffffff;
+  --section-border-color: #e6dfd1;
+  --shadow-color: rgba(209, 181, 117, 0.2);
+
+  /* Complementar */
+  --about-bg-color: #ffffff;
+  --about-shadow-color: rgba(209, 181, 117, 0.3);
+  --highlight-color: #ebe5d9;
+  --hover-effect-color: rgba(217, 197, 147, 0.1);
+  --border-radius: 10px;
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Solução para evitar o espaço branco à direita */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Estilos gerais e específicos aqui */
+.header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 15px 0;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Restante do CSS continua, removendo duplicações */
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 7vw;
+  height: auto;
+  margin-right: 50px;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links ul li {
+  margin-left: 20px;
+}
+
+.nav-links ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color var(--transition);
+
+}
+
+.nav-links ul li a:hover {
+  color: var(--accent-color);
+}
+
+.hero-image {
+  width: 100%;
+  height: 30vw;
+  background-image: url('assets/photo.png');
+  background-size: cover;
+  background-position: top center;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+
+.hero-image button {
+  margin: 35px;
+  border: none;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  font-size: 16px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: transform var(--transition), background-color var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hero-image button:hover {
+  background-color: var(--button-hover-bg-color);
+  transform: scale(1.1);
+}
+
+.hero-image button:active {
+  transform: scale(1.05);
+  box-shadow: inset 0 0 10px var(--shadow-color);
+}
+
+.hero-image button img {
+  width: 24px;
+  height: 24px;
+}
+
+.hero-image p{
+  text-wrap: nowrap;
+  margin: 0px;
+  padding: 0px;
+}
+
+.control_text {
+  padding: 100px;
+  background-color: #33333344;
+  color: aliceblue;
+  width: 100%;
+}
+
+.checkIcon {
+  width: 32px;
+}
+
+.control_text h1 {
+  font-size: 3.5rem;
+  align-self: center;
+  justify-self: center;
+}
+
+.control_text button {
+  width: 200px;
+  height: 50px;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.control_text button:hover {
+  background-color: var(--button-hover-bg-color);
+  color: var(--button-hover-text-color);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.effect:hover {
+  transform: scale(1.03);
+}
+
+.about-section {
+  background-color: var(--about-bg-color);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px var(--about-shadow-color);
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.about-image {
+  width: 500px;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px var(--shadow-color);
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+.about-text ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.checkIcon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+.services {
+  background-color: var(--services-bg-color);
+  color: var(--services-text-color);
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 1% 10% 1% 10%;
+  gap: 30px;
+}
+
+.services h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.services p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.serv_text {
+  width: 100%;
+  text-align: start;
+}
+
+.serv_imgs {
+  display: flex;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.serv_imgs p {
+  margin-top: 20px;
+}
+
+.serv_div_img {
+  width: 200px;
+  height: 200px;
+  padding-bottom: 22%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform var(--transition) ease;
+  background-color: var(--hover-effect-color);
+}
+
+.serv_div_img:hover {
+  transform: scale(1.05);
+}
+
+
+blockquote {
+  margin: 20px 0;
+  padding: 15px;
+  border-left: 5px solid var(--accent-color);
+  background-color: var(--highlight-color);
+  font-style: italic;
+  color: var(--text-color);
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  text-align: right;
+}
+
+.serv_imgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+
+.testimonial-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-size: cover; /* Faz o SVG cobrir toda a área */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px; /* Adiciona espaço para o texto dentro do balão */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(25% - 20px);
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  color: #333;
+  max-width: 85%; /* Mantém o texto dentro da área de imagem */
+  line-height: 1.6;
+  margin: 0px;
+  border-radius: 5px;
+  background-color: #ccd5df00;
+  
+}
+
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial-card p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 85%;
+  margin-top: 10px;
+}
+
+
+
+
+/* Estilo do Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.footer .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 150px;
+  height: auto;
+}
+
+.footer-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-section ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #4a90e2;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.social-icon img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Responsividade do Footer */
+/* Ajustes para a seção testimonials em telas pequenas */
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+  .header-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 12vw;
+    margin-right: 20px;
+  }
+
+  .header h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .nav-links ul li {
+    margin: 10px 0;
+  }
+
+  .hero-image {
+    height: 50vw;
+  }
+
+  .control_text {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .control_text h1 {
+    font-size: 2.5rem;
+  }
+
+  .control_text button {
+    width: 150px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+  }
+
+  .services {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .serv_imgs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .serv_div_img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .testimonial-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .testimonial-card {
+    flex-basis: calc(100% - 20px);
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    height: 60vw;
+  }
+
+  .control_text h1 {
+    font-size: 2rem;
+  }
+
+  .about-image {
+    max-width: 200px;
+  }
+
+  .services h2 {
+    font-size: 2rem;
+  }
+
+  .services p {
+    font-size: 1.2rem;
+  }
+
+  .serv_div_img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hero-image {
+    height: 70vw;
+    margin-right: 20px;
+  }
+
+  .control_text h1 {
+    font-size: 1.5rem;
+  }
+
+  .control_text button {
+    width: 120px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .about-text {
+    font-size: 0.8rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+  .serv_imgs{
+    margin-left: 80px;
+  }
+  .serv_div_img {
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .testimonial-card {
+    margin: 5px 0;
+  }
+}
